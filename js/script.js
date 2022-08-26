@@ -1,3 +1,4 @@
+// Création des élèments
 function setCanap(kanap) {
     let newLink = document.createElement("a");
     newLink.href = `./product.html?id=${kanap._id}` 
@@ -10,6 +11,7 @@ function setCanap(kanap) {
     let newH3 = document.createElement("h3");
     newH3.className = "productName";
     newH3.textContent = kanap.name;
+    
   
     let newP = document.createElement("p");
     newP.className = "productDescription";
@@ -25,6 +27,7 @@ function setCanap(kanap) {
     return newLink;
   }
   
+  // insertion de l'API
   async function getProducts() {
     await fetch("http://localhost:3000/api/products")
       .then((response) => response.json())

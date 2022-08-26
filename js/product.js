@@ -1,10 +1,12 @@
 let str = window.location.href;
 let url = new URL(str);
 
-let article_url_id = window.location.search;
-let urlParams = new URLSearchParams(article_url_id);
+let article_url = window.location.search;
+let urlParams = new URLSearchParams(article_url);
 let productId = urlParams.get("id");
 // let article = "";
+
+
 
 // Insertion des options de couleurs
 function setColors(colors) {
@@ -18,6 +20,7 @@ function setColors(colors) {
   }
 }
 
+// Insertion des produits
 function choiceProd(article) {
   let item = document.querySelector(".item");
 
@@ -46,6 +49,8 @@ function choiceProd(article) {
 
 // choiceProd();
 
+
+// recupération de l'API
 async function getProducts(article) {
   let id = new URL(window.location).searchParams.get("id");
 
